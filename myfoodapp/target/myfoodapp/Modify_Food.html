@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Modify Food items..</title>
+      <meta charset="utf-8">
+      <title>Modify food Items</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body bgcolor="#E6E6FA">
+      	<nav>
+         <label class="logo">PizzaOrder</label>
+         <ul>
+           
+            <li><a  href="Add Pizza Store.html">Add Pizza store</a></li>
+       	    <li><a class ="active" href="Modify_Pizza_Store.html">Modify Pizza store</a></li>		  
+            <li><a class="active" href="View_Pizza_Store.html">View Pizza Store </a></li>
+	    <li><a class ="active" href="Update_Order_Status.html">Update Order Status</a></li>
+	    <li><a class ="active" href="Add_Food_Items.html">Add Food Items</a></li>
+	    <li><a class ="active" href="Modify_Food.html">Modify and Delete Food Item</a></li>
+	    
+
+       	    <li><a class ="active" href="admin login.html">Quit Session</a></li>	
+      </nav>
+      
+</body>
+</html>
+<html>
+<head>
+<script type="text/javascript" src="table_script.js"></script>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div id="wrapper">
+<table  cellspacing=2 cellpadding=5 id="data_table" >
+<tr>
+<th>Id</th>
+<th>Quantity</th>
+<th>Name</th>
+<th>Price</th>
+</tr>
+
+<tr id="row1">
+<td id="id_row1">101</td>
+<td id="quantity_row1">1</td>
+<td id="name_row1">Veg Farmhouse</td>
+<td id="price_row1">150</td>
+<td>
+<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+<input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+</td>
+</tr>
+
+<tr id="row2">
+<td id="id_row2">102</td>
+<td id="quantity_row2">3</td>
+<td id="name_row2">Mushroom Pizza</td>
+<td id="price_row2">240</td>
+<td>
+<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+<input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+</td>
+</tr>
+
+<tr id="row3">
+<td id="id_row3">101</td>
+<td id="quantity_row3">!</td>
+<td id="name_row3">Non-veg Supreme</td>
+<td id="price_row3">800</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+<input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+</td>
+</tr>
+
+<tr>
+<td><input type="text" id="new_id"></td>
+<td><input type="text" id="new_quantity"></td>
+<td><input type="text" id="new_name"></td>
+<td><input type="text" id="new_price"></td>
+<td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+</tr>
+
+</table>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+	
+
+

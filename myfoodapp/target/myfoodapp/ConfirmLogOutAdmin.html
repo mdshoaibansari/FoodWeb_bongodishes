@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/ConfirmLogOut.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+                integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+                crossorigin="anonymous">
+     <style>
+     	header{
+    		background-color: white;
+    	}
+     </style>
+    <title>Confirmation Logout</title>
+</head>
+<header class=" bg-dark text-white d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        
+        <svg class="bi me-4 text-white"  width="40" height="32"><div class="text-white"><i class="fas fa-store"></i></div></svg>
+        <span class="fs-4 mx-3 text-white">Admin Page</span>
+      </a>
+		
+      <ul class="nav nav-pills">
+        <li class="nav-item "><a href="adminhome.jsp" class="nav-link " aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="AllStore.jsp" class="nav-link ">Manage Store</a></li>
+        <li class="nav-item"><a href="AllFood.jsp" class="nav-link">Manage Food</a></li>
+        <li class="nav-item"><a href="ConfirmLogOutAdmin.html" class="nav-link active">Logout</a></li>
+        
+      </ul>
+    </header>
+<div class="contact" id="contact">
+    <div class="form-box">
+        
+            <div class="contact-inner-col" >
+                <h1>Are You Sure Want Quit&nbsp;<i class="fas fa-sign-out-alt"></i></h1>
+                  
+                    <button class="btn"><a href="LogoutServlet">Yes</a></button>
+                    <br>
+                    <button class="btn"><a href="adminhome.jsp">No</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+        function preback(){window.history.forward();} 
+        setTimeout("preback()",0);
+        window.onunload=function(){null};
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+                integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+                crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+                integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+                crossorigin="anonymous"></script>
+</html>

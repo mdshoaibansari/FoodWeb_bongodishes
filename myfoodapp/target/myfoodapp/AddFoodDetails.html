@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/AddPizzaDetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Food Details</title>
+</head>
+<div class="contact" id="contact">
+    <div class="form-box"> 
+            <div class="contact-inner-col">
+                <h1>Food Details&nbsp;<i class="fas fa-pizza-slice"></i></h1>
+                <form action="SaveFood" id="" method="get">
+                    <!-- <input type="text" name="name" id=" " placeholder="FoodID" required> -->
+                    <select name="type" id="state" class="form-control">
+                    <option value="select" selected>Select Type</option>
+                    <option value="nv">Non-veg</option>
+                    <option value="v">Veg</option>
+                    
+                    <input type="text" name="name"  placeholder="Food Name" required>
+                    
+                    <input type="text" name="price"  placeholder="Price" required>
+                    
+                    <div class="contact-inner-file">
+                    <h2><input type="file" name="name" id=" " placeholder="Price" ></h2>         
+                 </select>
+                    
+                   <br>
+                    <button class="btn" type="submit">Add Food Details</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</html>

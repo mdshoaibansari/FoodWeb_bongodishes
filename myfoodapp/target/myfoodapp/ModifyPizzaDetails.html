@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Modify Pizza Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="ModifyPizzaDetails.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./resources/css/ModifyPizzaDetails.css">
+</head>
+<body>
+ <b>Modify Pizza Details</b>
+
+      <table  id="cart" >
+        <tr>
+          <th id="image">Images</th>
+          <th id="type">Pizza Type</th>
+          <th id="name">Pizza Name</th>
+          <th id="quantity">Quantity</th>
+          <th id="price">Price</th>
+          <th id="modify">Modify</th>
+        </tr>
+        <tr id="row1">
+          <td id="image"></td>
+          <td id="pizza type_row1">1</td>
+          <td id="pizza name_row1">1</td>
+          <td id="quantity_row1">1</td>
+          <td id="price_row1">1</td>
+          <td>
+            <button type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">Edit</button>
+            <button type="button" id="save_button1" value="Save" class="edit" onclick="save_row('1')">Save</button>
+            <button type="button" value="Delete" class="delete" onclick="delete_row('1')">Delete</button>
+              
+          </td>
+        </tr><!--
+        <tr id="row2">
+         
+          <td id="pizza type_row2"></td>
+          
+          <td id="pizza name_row2"></td>
+          <td id="toppings_row2"></td>
+          <td id="quantity_row2"></td>
+         
+          <td>
+            <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+            <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+            <input type="button" value="Cancel" class="delete" onclick="delete_row('2')">
+          </td>
+        </tr>
+        <tr id="row3">
+         
+          <td id="pizza type_row3"></td>
+          
+          <td id="pizza name_row3"></td>
+          <td id="toppings_row3"></td>
+          <td id="quantity_row3"></td>
+          
+          <td>
+            <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+            <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+            <input type="button" value="Cancel" class="delete" onclick="delete_row('3')">
+          </td>
+        </tr>
+        <tr id="row5">
+        
+          <td id="pizza type_row5"></td>
+          
+          <td id="pizza name_row5"></td>
+          <td id="toppings_row5"></td>
+          <td id="quantity_row5"></td>
+         
+          <td>
+            <input type="button" id="edit_button5" value="Edit" class="edit" onclick="edit_row('5')">
+            <input type="button" id="save_button5" value="Save" class="save" onclick="save_row('5')">
+            <input type="button" value="Cancel" class="delete" onclick="delete_row('5')">
+          </td>
+        </tr>-->
+      </table> 
+</body>
+</html>

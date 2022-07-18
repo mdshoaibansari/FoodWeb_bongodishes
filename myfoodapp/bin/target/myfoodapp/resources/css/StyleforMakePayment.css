@@ -1,0 +1,134 @@
+:root {
+    --clr1: #f95b11;
+    --clr2: #fff;
+    --clr3: #000;
+    --clr4: #f42f1d;
+    --clr5: limegreen;
+}
+body {
+    margin: 0% 37%;
+    background-image: url(../images/pexels-pixabay-326333.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+a {
+    color: var(--clr2);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+a:hover {
+    transition: .4s ease;
+    color: yellow;
+}
+.btn {
+    margin-top: 2rem ;
+    margin-left: 0rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover {
+    background-color: var(--clr3);
+    box-shadow: 0px .2rem 2rem rgba(255, 85, 94, 0.4);
+    color: #fff;
+    transform: translateY(-1rem);
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+}
+.form-box
+{
+    width:380px;
+    height:640px;
+    position: relative;
+    margin: 0% auto ;
+    background:rgba(0,0,0,0.8);
+    padding:10px;
+    overflow: hidden;
+}
+#contact {
+    padding-top: 3rem;
+}
+
+.contact-sec {
+    width: 100%;
+}
+
+.contact-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner-col {
+    margin: 2rem;
+    flex: 1 1 20rem;
+    text-align: center;
+}
+
+.contact-inner-col img {
+    width: 50%;
+    height: auto;
+    margin: 1.5rem;
+    padding: 1rem;
+}
+
+.contact-inner-col h1 {
+    padding: 1rem 0;
+    color: var(--clr4);
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+
+.contact-inner-col p {
+    padding: .5rem 0;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #aaa;
+}
+.contact-inner-col select {
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    scroll-behavior: bottom ;
+    border-bottom: .3rem solid var(--clr4);
+}
+
+.contact-inner-col input,
+.contact-inner-col textarea {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: .3rem solid var(--clr4);
+}
+.contact-inner-col n {
+    color: var(--clr2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 10%;
+    margin-right: 85%;
+
+}
+.contact-inner-col n:hover {
+    transition: .4s ease;
+    color: yellow;
+}

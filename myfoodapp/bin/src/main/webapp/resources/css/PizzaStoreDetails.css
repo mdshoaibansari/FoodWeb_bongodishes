@@ -1,0 +1,120 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+table{
+    width: 80%;
+    height: 30%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+}
+body{
+  font-family: sans-serif;
+  overflow: hidden;
+  user-select: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(pizza3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+nav .logo{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 65px;
+  padding-left: 110px;
+}
+nav{
+  height: 65px;
+  background: #063247;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 20px;
+  line-height: 55px;
+  font-size: 10px;
+  background: #063247;
+  transition: .5s;
+}
+img.a {
+  vertical-align: baseline;
+}
+div{
+    margin-left: 100;
+}
+
+th {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 2rem;
+}
+
+th:hover {
+    transition: .4s ease;
+    color: red;
+}
+.option{
+    width: 0%;
+    margin-right: 50%;
+}
+
+.id{
+    width: 10%;
+}
+.name{
+    width: 20%;
+}
+.number{
+    width: 15%;
+}
+.address{
+    width: 35%;
+}
+.state{
+    width: 20%;
+}
+b{
+  width: 25%;
+  margin: 7% 20%;
+  color: white;
+  display: block;
+  padding: 0 230px;
+  line-height: 65px;
+  font-size: 60px;
+  background: maroon;
+  transition: .5s;
+}
+
+
+
+ {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  height: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}

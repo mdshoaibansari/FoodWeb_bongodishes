@@ -1,0 +1,120 @@
+:root {
+    --clr1: #f95b11;
+    --clr2: #fff;
+    --clr3: #000;
+    --clr4: #f42f1d;
+    --clr5: limegreen;
+}
+body {
+  min-height  : 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../images/pexels-lukas-616401.jpg");
+             background-repeat: no-repeat;
+            background-size:cover; 
+            background-position: 10% ;
+}
+a {
+    color: var(--clr3);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 2rem;
+}
+a:hover {
+    transition: .4s ease;
+    color: black;
+}
+.btn {
+    margin-top: 2rem ;
+    margin-left: 0rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover {
+    background-color: var(--clr3);
+    box-shadow: 0px .2rem 2rem rgba(255, 85, 94, 0.4);
+    color: white;
+    transform: translateY(-1rem);
+}
+.btn:hover a {
+    transition: .4s ease;
+    color: white;
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+}
+.form-box
+{
+    width:380px;
+    height:450px;
+    position: relative;
+    
+    background:rgba(0,0,0,0.8);
+    padding:10px;
+    overflow: hidden;
+}
+#contact {
+        display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-sec {
+    width: 100%;
+}
+
+.contact-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner-col {
+    margin: 2rem;
+    flex: 1 1 20rem;
+    text-align: center;
+}
+
+.contact-inner-col img {
+    width: 50%;
+    height: auto;
+    margin: 1.5rem;
+    padding: 1rem;
+}
+
+.contact-inner-col h1 {
+    padding: 1rem 0;
+    color: var(--clr4);
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+
+.contact-inner-col p {
+    padding: .5rem 0;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #aaa;
+}
+
+.contact-inner-col input,
+.contact-inner-col textarea {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: .3rem solid var(--clr4);
+}
