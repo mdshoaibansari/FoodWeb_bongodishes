@@ -1,4 +1,4 @@
- <%@page import="com.wipro.bean.PizzaBean,com.wipro.Dao.PizzaDao,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
+ <%@page import="com.wipro.bean.*,com.wipro.Dao.*,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,32 +214,39 @@
             <a href="#" class="btn">add to cart</a>
         </div>
         <%
-        PizzaDao pd=new PizzaDao();
-        ArrayList<PizzaBean> list=pd.getAllFood();
-        %>
+        StoreDao sd=new StoreDao();
+        ArrayList<RelStoreFoodBean> list=sd.getAllRelations();
+        FoodBean fb=null;
+            %>
         
         <%
             
-            PizzaBean pb;
+        RelStoreFoodBean  rsfb;
             for(int i=0;i<list.size();i++)
             {
-                pb=list.get(i);
+                rsfb=list.get(i);
+                
+              
                 %> 
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<%= pb.getImagePath() %>" alt="">
-            <h3><%= pb.getFoodName() %></h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; <%= pb.getPrice() %></span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
+                <div class="box" id="<%= rsfb.getRelationId() %>">
+                    <div class="image">
+                        <img src="<%= rsfb.getPath() %>" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3><%= sd.getFoodName(rsfb.getFoodid()) %></h3>
+                        <p>By <%= sd.getStoreName(rsfb.getStoreid()) %> </p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">&#x20b9; <%= rsfb.getPrice() %></span>
+                    </div>
+                </div>
         <%
             }
         %>

@@ -27,11 +27,18 @@ public class StoreDao {
 		
 		return rw;
 	}
-	public ArrayList<RelStoreFoodBean> getAllRelations(){
+	public ArrayList<RelStoreFoodBean> getAllRelations(String query){
 		ArrayList<RelStoreFoodBean> list=new ArrayList<RelStoreFoodBean>();
 		try {
 			Connection conn=DButil.getConnection();
-			String sql="select * from relationstorefood";
+			String sql=null;
+			if(query==null){
+				sql="select * from relationstorefood";
+			}
+			else{
+				sql="SELECT * FROM relationstorefood JOIN storedb join food_db on relationstorefood.foodid2=food_db.foodId and relationstorefood.storeid2=storedb.storeid  where food_db.foodName like '%unthink%'  ";
+				
+			}
 			PreparedStatement st=conn.prepareStatement(sql);
             ResultSet rs   = st.executeQuery();
             while(rs.next()) {
@@ -179,5 +186,24 @@ public class StoreDao {
 		}
 		return foodname;
 	}
+    public int getQauntity(String relationId) {
+		int quantity=-1;
+		try {
+			Connection conn=DButil.getConnection();
+			String sql="select quantity from relationstorefood where relationid=?";
+			PreparedStatement st=conn.prepareStatement(sql);
+			st.setInt(1,Integer.parseInt(relationId) );
+            ResultSet rs   = st.executeQuery();
+            while(rs.next()) {
+            	
+            	quantity= rs.getInt(1);
+            	
+            }
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return quantity;
+    }
 	
 }

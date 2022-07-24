@@ -1,0 +1,9 @@
+$.ajax({
+          
+    url : "isAvailable",
+    data : {rid : i},
+    success: function(responseText,textstatus,jqXHR){
+       console.log(responseText);
+        if(parseInt(responseText)<0)
+          alert('Sorry.. our Limit for this food is crossed');
+    }

@@ -102,8 +102,6 @@ async function myuploadFile(){
 async function myuploadFile(){
 	console.log("it is start working");
 	const formdata=new FormData(form);
-    formdata.append("storeid",get('storeid'));
-    formdata.append("file", ajaxfile.files[0]);
     var message="";
     $.ajax({
 	url : 'AddNewFoodInStore' ,
@@ -122,6 +120,10 @@ async function myuploadFile(){
     location.reload(false);
   
   
+}
+window.onload=function(){
+    document.getElementById('setStoreid').value= get('storeid');
+
 }
 function get(name){
     if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))

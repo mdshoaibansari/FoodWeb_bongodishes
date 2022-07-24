@@ -1,5 +1,6 @@
 com\wipro\store\DeleteMultFood.class
 com\wipro\controller\Payment.class
+com\wipro\loginServlet\OtpValidation$1.class
 com\wipro\loginServlet\LoginServlet.class
 com\wipro\store\AddNewFoodInStore.class
 com\wipro\Dao\AdminDao.class
@@ -7,6 +8,7 @@ com\wipro\bean\RelStoreFoodBean.class
 com\wipro\bean\StoreBean.class
 com\wipro\loginServlet\ForgotPassword$1.class
 com\wipro\registerServlet\RegisterServlet.class
+com\wipro\loginServlet\ValidateOtpVal.class
 com\wipro\store\DeleteMultStore.class
 com\wipro\food\DeleteStore.class
 com\wipro\changeServlet\ChangePass.class
@@ -17,8 +19,10 @@ com\wipro\Dao\StoreDao.class
 com\wipro\controller\AddPizzaFoodServlet.class
 com\wipro\bean\PizzaBean.class
 com\wipro\loginServlet\ForgotPassword.class
+com\wipro\controller\isSignIn.class
 com\wipro\controller\removecartservlet.class
 com\wipro\util\DButil.class
+com\wipro\controller\isAvailable.class
 com\wipro\loginServlet\LogoutServlet.class
 com\wipro\loginServlet\someservlet.class
 com\wipro\bean\UserBean.class
@@ -28,6 +32,7 @@ com\wipro\Dao\FoodDao.class
 com\wipro\Dao\PizzaDao.class
 com\wipro\bean\AdminBean.class
 com\wipro\Dao\PaymentDao.class
+com\wipro\loginServlet\OtpValidation.class
 com\wipro\controller\AddPizzaServlet.class
 com\wipro\store\UpdateStore.class
 com\wipro\food\UpdateFood.class

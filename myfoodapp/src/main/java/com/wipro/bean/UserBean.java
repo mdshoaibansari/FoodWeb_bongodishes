@@ -1,6 +1,10 @@
 package com.wipro.bean;
 
-public class UserBean {
+import java.io.Serializable;
+
+public class UserBean implements Serializable {
+    private static final long serialversionUID =
+                                 129348938L;
     private String userName;
     private String password;
     private String email;

@@ -10,6 +10,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import java.security.Key;
 
@@ -30,13 +31,16 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter out=resp.getWriter();
-       
-        String username = req.getParameter("username");
-        String passwd = req.getParameter("pass");
-        String email = req.getParameter("email");
-        String phnumber = req.getParameter("phnumber");
         // out.println("Working...");
         // out.println("<h1>"+username+" "+passwd+" "+email+" "+phnumber+"</h1>");
+        // if(call==0){
+        // req.getRequestDispatcher("OtpValidation").include(req, resp);
+        // RegisterServlet.call++;    
+        // }
+        String email = req.getParameter("email");
+        String username = req.getParameter("username");
+        String passwd = req.getParameter("pass");
+        String phnumber = req.getParameter("phnumber");
         try {
             UserBean ub = new UserBean();
 
@@ -45,23 +49,18 @@ public class RegisterServlet extends HttpServlet {
             ub.setPassword(encrypt(passwd, key));
             ub.setEmail(email);
             ub.setPhnumber(phnumber);
-
-            UserDao dao = new UserDao();
-            if (dao.setUser(ub)) {
-
-                req.getRequestDispatcher("index.jsp").forward(req, resp);
-            } else {
-
-                req.setAttribute("error", "something went wronging");
-                req.getRequestDispatcher("inin.jsp").forward(req, resp);
-            }
+            HttpSession session=req.getSession();
+            session.setAttribute("userDetails", ub);
+            resp.sendRedirect("OtpValidation");
         } catch (Exception e) {
 
             e.printStackTrace();
         }
+       
         out.close();
     }
     private static final byte[] keyValue = "1234567891234567".getBytes();
+    private static int call=0;
     private static Key generateKey() throws Exception {
         return new SecretKeySpec(keyValue, "AES");
 

@@ -33,3 +33,4 @@ com\wipro\store\UpdateStore.class
 com\wipro\food\UpdateFood.class
 com\wipro\bean\PaymentBean.class
 com\wipro\Dao\UserDao.class
+com\wipro\store\DeleteMultFoodInStore.class

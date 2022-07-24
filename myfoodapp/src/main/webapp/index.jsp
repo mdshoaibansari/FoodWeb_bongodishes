@@ -14,7 +14,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./resources/css/style3.css">
-
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
     
@@ -47,9 +47,9 @@
 
 <!-- search form  -->
 
-<form action="" id="search-form">
-    <input type="search" placeholder="search here..." name="" id="search-box">
-    <label for="search-box" class="fas fa-search"></label>
+<form action="" id="search-form" onsubmit="return searchFotIt()">
+    <input type="text" placeholder="search here..." name="q" id="search-box">
+    <label for="search-box" class="fas fa-search" onclick="searchForIt()"></label>
     <i class="fas fa-times" id="close"></i>
 </form>
 
@@ -215,7 +215,8 @@
         </div>
         <%
         StoreDao sd=new StoreDao();
-        ArrayList<RelStoreFoodBean> list=sd.getAllRelations();
+        String query=request.getParameter("q");
+        ArrayList<RelStoreFoodBean> list=sd.getAllRelations(query);
         FoodBean fb=null;
             %>
         
@@ -243,7 +244,9 @@
                         </div>
                         <h3><%= sd.getFoodName(rsfb.getFoodid()) %></h3>
                         <p>By <%= sd.getStoreName(rsfb.getStoreid()) %> </p>
-                        <a href="#" class="btn">add to cart</a>
+                        <div id="btngrp<%= rsfb.getRelationId()%>">
+                            <button class="btn" onclick="setcart(<%=  rsfb.getRelationId()%>)" id="somebutton">Add to Cart</button>
+                            </div>
                         <span class="price">&#x20b9; <%= rsfb.getPrice() %></span>
                     </div>
                 </div>
@@ -484,6 +487,41 @@
                 <span class="price">&#x20b9; 251</span>
             </div>
         </div>
+       
+        
+        <%
+            
+       
+            for(int i=0;i<list.size();i++)
+            {
+                rsfb=list.get(i);
+                
+              
+                %> 
+                <div class="box" id="<%= rsfb.getRelationId() %>">
+                    <div class="image">
+                        <img src="<%= rsfb.getPath() %>" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3><%= sd.getFoodName(rsfb.getFoodid()) %></h3>
+                        <p>By <%= sd.getStoreName(rsfb.getStoreid()) %> </p>
+                        <div id="btngrp<%= rsfb.getRelationId()%>">
+                            <button class="btn" onclick="setcart(<%=  rsfb.getRelationId()%>)" id="somebutton">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                            </div>
+                        <span class="price">&#x20b9; <%= rsfb.getPrice() %></span>
+                    </div>
+                </div>
+        <%
+            }
+        %>
 
     </div>
 

@@ -68,7 +68,7 @@
 
           <h1 class="text-center mt-2">Manage : <%= storeName %>
           </h1>
-          <form id="FoodForm" enctype="multipart/form-data" method="post">
+          <form id="FoodForm"  method="get">
             <span id="buttonSet">
               <button class="btn btn-danger" type="button" onclick="deleteFood()"> Delete </button>
               <button class="btn btn-info" type="button" id="EditButton" onclick="edit()"> Edit </button>
@@ -96,7 +96,7 @@
                   RelStoreFoodBean rsfb;
                   for(int i=0;i<list.size();i++) { rsfb=list.get(i); %>
                     <tr id="rowid<%= rsfb.getRelationId()%>">
-                      <td scope="row"><input type="checkbox" name="userName" id="" value="<%= rsfb.getRelationId() %>">
+                      <td scope="row"><input type="checkbox" name="relationid" id="" value="<%= rsfb.getRelationId() %>">
                       </td>
                       <td>
                         <%= fd.getFoodName(rsfb.getFoodid()) %>
@@ -117,7 +117,7 @@
                         PizzaBean pb;
                         %>
                         <tr id="newRow" style=" display: none;">
-                          <td scope="row"><input type="checkbox" name="userName" id="mainCheck" value="<%= storeid %>">
+                          <td scope="row"><input type="checkbox" name="relationid" id="mainCheck" value="<%= storeid %>">
                           </td>
                           <td>
                             <select name="foodid" id="foodid" class="form-control">
@@ -205,6 +205,8 @@
                     <div class="mb-3">
                       <input type="text" class="form-control" name="quantity" id="" aria-describedby="helpId"
                               placeholder="Enter Quantity">
+                              <input type="text"   class="form-control"  style='display:none;' name="storeid" id="setStoreid" value="" aria-describedby="helpId"
+                              placeholder="Enter Food Image">
                     </div>
                     <div class="mb-3">
                       <input type="file" id="ajaxfile" accept="image/*" class="form-control" name="imageFile" id="" aria-describedby="helpId"

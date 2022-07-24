@@ -36,7 +36,7 @@
 
         <thead>
           <tr>
-            <th scope="col">Pizza Name</th>
+            <th scope="col">Food Name</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Amount</th>
