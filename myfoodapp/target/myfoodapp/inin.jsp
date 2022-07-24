@@ -42,6 +42,7 @@
 			<input type="text" placeholder="Name" name="username"  required />
 			<input type="text" placeholder="Email" name="email" required  />
 			<input type="text" placeholder="Phone Number" name="phnumber"  required />
+			<input type="text" placeholder="Address" name="address"  required />
 			<input type="password" placeholder="Password" name="pass"  id="pass"  required/>
 			<input type="password" placeholder="Confirm Password" name="confirmpass" id="pass2"  required />
 			<span id="message"></span>

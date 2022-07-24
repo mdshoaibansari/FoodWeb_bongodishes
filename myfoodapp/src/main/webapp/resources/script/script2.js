@@ -103,28 +103,32 @@ function addcart(i) {
       console.log(responseText);
       if (parseInt(responseText) < 0) {
         a--;
+
         document.cookie = `${i}` + "=" + a;
         alert('Sorry.. our Limit for this food is crossed');
       }
       else {
         var btnid = 'btn' + i;
-        var amountid = 'amount' + i;
+
         var priceid = 'price' + i;
         document.getElementById(btnid).innerText = a;
-        let temp = document.getElementById(priceid).innerText;
-        let totalamountDiv = document.getElementById('totalamount');
+        let temp = document.getElementById(priceid).innerText.substring(2);
+
         console.log(temp + " + " + a);
-        let total = a * parseInt(temp);
-        let val = document.getElementById(amountid);
-        let totalamount = parseInt(totalamountDiv.innerText) - parseInt(val.innerText) + total;
-        val.innerText = total;
-        totalamountDiv.innerText = totalamount;
+
+        total = parseInt(arr['totalamount']);
+        if (isNaN(total)) {
+          total = 0;
+        }
+        let totalamount = total + parseInt(temp);
+
+       
         document.cookie = `totalamount` + "=" + totalamount;
       }
     }
   });
 }
- 
+
 
 
 
@@ -138,17 +142,18 @@ function removecart(i) {
   }
   document.cookie = `${i}` + "=" + a;
   var btnid = 'btn' + i;
-  var amountid = 'amount' + i;
+
   var priceid = 'price' + i;
   document.getElementById(btnid).innerText = a;
   let temp = document.getElementById(priceid).innerText;
-  let totalamountDiv = document.getElementById('totalamount');
+  
   console.log(temp + " + " + a);
-  let total = a * parseInt(temp);
-  let val = document.getElementById(amountid);
-  let totalamount = parseInt(totalamountDiv.innerText) - parseInt(val.innerText) + total;
-  val.innerText = total;
-  totalamountDiv.innerText = totalamount;
+  total = parseInt(arr['totalamount']);
+  if (isNaN(total)) {
+    total = 0;
+  }
+  let totalamount = total - parseInt(temp);
+ 
   document.cookie = `totalamount` + "=" + totalamount;
 }
 
@@ -175,4 +180,9 @@ function setcart(i) {
 }
 function readyfight() {
 
+}
+window.onload = function () {
+  let arr = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+
+  document.getElementById('totalamount').innerText = parseInt(arr['totalamount']);
 }

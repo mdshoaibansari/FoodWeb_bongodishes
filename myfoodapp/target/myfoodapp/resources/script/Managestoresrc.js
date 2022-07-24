@@ -67,16 +67,9 @@ function add(){
          var myModal = new bootstrap.Modal(document.getElementById('addstrfood'));
          myModal.show();  
          
-            
-      
     let ele2=document.getElementById('FoodForm');
-    
-       ele2.action="AddNewFoodInStore"; 
+    ele2.action="AddNewFoodInStore"; 
 
- document.getElementById('newRow').style.display = 'table-row';
- document.getElementById('mainCheck').checked=true;
-
- 
 }
 var form = document.getElementById('FoodFormModal');
 /*document.getElementById('mySubmitButton').addEventListener('click',*/
@@ -128,7 +121,7 @@ window.onload=function(){
 function get(name){
     if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
        return decodeURIComponent(name[1]);
- }
+}
 /*
 async function uploadFile() {
     let formData = new FormData(); 
