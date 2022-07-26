@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@page import="com.wipro.bean.PizzaBean,com.wipro.Dao.PizzaDao,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %>
-<!DOCTYPE html>
+    <%@ page import="com.foodapp.bean.*,com.foodapp.Dao.*,com.foodapp.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
+    <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -53,11 +53,12 @@
                 	
                 int temp= Integer.parseInt( c[ij].getName());
                 String val=c[ij].getValue();
-                PizzaDao pd=new PizzaDao();
-                
+                StoreDao sd=new StoreDao();
+                RelStoreFoodBean  rsfb;
                   if(temp>=1000){
                 	 
-                    PizzaBean pb=pd.getPizza(temp);
+                    
+                    rsfb=sd.getRelation(temp);
                
        %>
                    
@@ -65,14 +66,14 @@
         <tbody>
           <tr>
                  
-            <th scope="row"><%= pb.getFoodName()%></th>
-            <td id="price<%= temp %>"><%= pb.getPrice()%></td>
+            <th scope="row"><%= sd.getFoodName(rsfb.getFoodid())%></th>
+            <td id="price<%= temp %>"><%= rsfb.getPrice()%></td>
              <!--  <td></td> -->
             <td><button class="btn" onclick="removecart(<%= temp %>)"> <i class="fas fa-minus-circle"></i></button>
               <button class="btn" id="btn<%= temp %>" ><%= val %></button>
               <button class="btn"  onclick="addcart(<%= temp %>)">  <i class="fas fa-plus-circle"></i></button></td>
-             <% total+= ( Integer.parseInt(val)*  Integer.parseInt(pb.getPrice()));%> 
-              <td id="amount<%= temp %>"><%= ( Integer.parseInt(val)*  Integer.parseInt(pb.getPrice())) %></td>
+             <% total+= ( Integer.parseInt(val)*  rsfb.getPrice();%> 
+              <td id="amount<%= temp %>"><%= ( Integer.parseInt(val)*  rsfb.getPrice() %></td>
           </tr>
 		 <%
 

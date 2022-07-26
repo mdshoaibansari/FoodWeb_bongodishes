@@ -1,4 +1,4 @@
-<%@page import="com.wipro.bean.*,com.wipro.Dao.*,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
+<%@ page import="com.foodapp.bean.*,com.foodapp.Dao.*,com.foodapp.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +54,7 @@
 <!-- search form  -->
 
 <form action="" id="search-form">
-    <input type="search" placeholder="search here..." name="" id="search-box">
+    <input type="search" placeholder="search here..." name="q" id="search-box">
     <label for="search-box" class="fas fa-search"></label>
     <i class="fas fa-times" id="close"></i>
 </form>
@@ -65,6 +65,12 @@
 <!-- home section ends -->
 
 <!-- dishes section starts  -->
+
+<section class="home" id="home">
+
+    
+
+</section>
 
 <section class="dishes" id="dishes">
 

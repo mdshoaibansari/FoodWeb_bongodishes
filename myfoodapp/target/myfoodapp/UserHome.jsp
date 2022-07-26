@@ -1,5 +1,4 @@
- <%@page import="com.wipro.bean.PizzaBean,com.wipro.Dao.PizzaDao,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
-<!DOCTYPE html>
+<%@ page import="com.foodapp.bean.*,com.foodapp.Dao.*,com.foodapp.util.DButil,java.util.*,javax.servlet.http.Cookie" %> <!DOCTYPE html>
 <html lang="en">
 
 <head>

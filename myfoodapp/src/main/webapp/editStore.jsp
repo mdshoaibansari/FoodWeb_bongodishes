@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.wipro.bean.StoreBean,com.wipro.Dao.PizzaDao,com.wipro.util.DButil,java.util.*,javax.servlet.http.Cookie" %>    
+    <%@ page import="com.foodapp.bean.*,com.foodapp.Dao.*,com.foodapp.util.DButil,java.util.*,javax.servlet.http.Cookie" %> 
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,4 @@
-<%-- <%@page import="com.wipro.bean.UserBean,com.wipro.Dao.UserDao,com.wipro.util.DButil" %> --%>
+<%-- <%@ page import="com.foodapp.bean.*,com.foodapp.Dao.*,com.foodapp.util.DButil,java.util.*,javax.servlet.http.Cookie" %>  --%>
 <!doctype html>
 <html lang="en">
   <head>
