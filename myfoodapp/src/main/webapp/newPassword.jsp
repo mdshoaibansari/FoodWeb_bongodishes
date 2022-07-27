@@ -40,11 +40,11 @@
 							</h1>
 						</div>
 						<div class="pt-3 pb-3">
-							<form class="form-horizontal" action="newPassword" method="POST">
+							<form class="form-horizontal" action="resetPassword" method="POST" onsubmit="return validate()">
 								<!-- User Name Input -->
 								<div class="form-group row justify-content-center px-3">
 									<div class="col-9 px-0">
-										<input type="text" name="password" placeholder="&#xf084; &nbsp; New Password"
+										<input type="text" name="password" id="pass"placeholder="&#xf084; &nbsp; New Password"
 											class="form-control border-info placeicon">
 									</div>
 								</div>
@@ -52,7 +52,7 @@
 								<div class="form-group row justify-content-center px-3">
 									<div class="col-9 px-0">
 										<input type="password" name="confPassword"
-											placeholder="&#xf084; &nbsp; Confirm New Password"
+											id="pass2"placeholder="&#xf084; &nbsp; Confirm New Password"
 											class="form-control border-info placeicon">
 									</div>
 								</div>
@@ -77,7 +77,7 @@
 							<div class="pt-2">
 								<div class="row justify-content-center">
 									<h5>
-										Don't have an Account?<span><a href="#"
+										Don't have an Account?<span><a href="inin.jsp"
 											class="text-danger"> Register Now!</a></span>
 									</h5>
 								</div>
@@ -94,6 +94,17 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		
+function validate(){
+	let ele=document.getElementById('pass');
+	let ele2=document.getElementById('pass2');
+	if(ele.value==ele2.value)
+	 return true;
+	document.getElementById('message').innerText="Your Password & Confirm Password must match";
+	return false
+}
+	</script>
 	<script type='text/javascript'
 		src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
 	

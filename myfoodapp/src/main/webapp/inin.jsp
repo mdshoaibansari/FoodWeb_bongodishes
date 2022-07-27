@@ -11,7 +11,11 @@
 			font-size: medium;
 			color: red;
 		}
-		#Message{
+		#Error2{
+			font-size: medium;
+			color: red;
+		}
+		#message{
 			font-size: medium;
 			color: red;
 		}
@@ -32,7 +36,8 @@
 			<% }
 				else{
 			%>
-			<br>
+			<span id="Error" ></span>
+			
 			<% } %>
 			<!-- <div class="wrapper-class">
 				<input type="radio" id="radio1" name="UserType" value="Admin">
@@ -54,9 +59,11 @@
 			<h1>Sign in</h1>
 			
 			<%  String Message=(String)request.getAttribute("Error");
+				
+				Message=(String)session.getAttribute("error");
 			     if(Message!=null){
 			%>
-			<span id="Error" ><%= Message%></span>
+			<span id="Error2" ><%= Message%></span>
 			
 			<% }
 				else{

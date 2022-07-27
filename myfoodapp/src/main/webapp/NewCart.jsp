@@ -72,8 +72,8 @@
             <td><button class="btn" onclick="removecart(<%= temp %>)"> <i class="fas fa-minus-circle"></i></button>
               <button class="btn" id="btn<%= temp %>" ><%= val %></button>
               <button class="btn"  onclick="addcart(<%= temp %>)">  <i class="fas fa-plus-circle"></i></button></td>
-             <% total+= ( Integer.parseInt(val)*  rsfb.getPrice();%> 
-              <td id="amount<%= temp %>"><%= ( Integer.parseInt(val)*  rsfb.getPrice() %></td>
+             <% total+= ( Integer.parseInt(val)*  rsfb.getPrice());%> 
+              <td id="amount<%= temp %>"><%= ( Integer.parseInt(val)*  rsfb.getPrice()) %></td>
           </tr>
 		 <%
 

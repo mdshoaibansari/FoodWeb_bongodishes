@@ -57,9 +57,28 @@
     <body>
 
       <div class="container">
-        <% int storeid=Integer.parseInt(request.getParameter("storeid")); StoreDao sd=new StoreDao(); FoodDao fd=new
-          FoodDao(); String storeName=sd.getStoreName(storeid); ArrayList<RelStoreFoodBean> list=
-          sd.getAllFood(storeid);
+        <% int storeid=0; 
+          StoreDao sd=new StoreDao(); 
+          FoodDao fd=new FoodDao(); 
+          Cookie[] c= request.getCookies();
+          if(c!=null){
+ 
+          for(int ij=0 ; ij<c.length;ij++){
+              try{
+                
+                      if(c[ij].getName().equals("managestoreid")){
+                        storeid=Integer.parseInt(c[ij].getValue());
+                      }                
+                
+              }
+              catch(Exception e){
+            	  e.printStackTrace();
+              }
+              
+            }
+          }
+          String storeName=sd.getStoreName(storeid); 
+          ArrayList<RelStoreFoodBean> list=sd.getAllFood(storeid);
 
 
           %>
@@ -92,7 +111,9 @@
               <tbody>
                 <% /* PizzaDao pd=new PizzaDao(); ArrayList<PizzaBean> list=pd.getAllFood(); */
                   RelStoreFoodBean rsfb;
-                  for(int i=0;i<list.size();i++) { rsfb=list.get(i); %>
+                  for(int i=0;i<list.size();i++) { 
+                	  rsfb=list.get(i); %>
+                  
                     <tr id="rowid<%= rsfb.getRelationId()%>">
                       <td scope="row"><input type="checkbox" name="relationid" id="" value="<%= rsfb.getRelationId() %>">
                       </td>

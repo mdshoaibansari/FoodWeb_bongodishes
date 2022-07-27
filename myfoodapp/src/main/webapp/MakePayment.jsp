@@ -57,7 +57,7 @@
                     <input type="password" name="cvv" id=" " placeholder="CVV" required>
                     <button class="btn" type="submit">Make Payment</button>
                     <br><br>
-                    <a href="index.jsp">Go Back</a>
+                    <a href="NewCart.jsp">Go Back</a>
             
                 </form>
             </div>

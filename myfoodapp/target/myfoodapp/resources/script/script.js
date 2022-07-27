@@ -14,6 +14,15 @@ function validate(){
 	let ele2=document.getElementById('pass2');
 	if(ele.value==ele2.value)
 	 return true;
-	document.getElementById('message').innerText="Your Password & Confirm Password must match";
-	return false
+	document.getElementById('Error').innerText="Your Password & Confirm Password must match";
+	return false;
+}
+window.onload=function(){
+	let val=document.getElementById('Error');
+	if(val.innerText.length>0){
+		container.classList.add("right-panel-active");
+	}
+	else{
+		val.innerHTML=`<br>`;
+	}
 }

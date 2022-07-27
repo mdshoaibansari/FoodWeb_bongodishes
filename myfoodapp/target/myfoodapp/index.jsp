@@ -28,16 +28,13 @@
         <a class="active" href="#home">home</a>
         <a href="#dishes">dishes</a>
         <a href="#about">about</a>
-        <a href="#menu">menu</a>
         <a href="#review">review</a>
-        <a href="#order">order</a>
         <a href="inin.jsp">Login</a>
     </nav>
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
         <a href="NewCart.jsp" class="fas fa-shopping-cart"></a>
     </div>
 
@@ -118,101 +115,7 @@
 
     <div class="box-container">
 
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-1.png" alt="">
-            <h3>Burger</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 160</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-2.png" alt="">
-            <h3>Momo</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 350</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-3.png" alt="">
-            <h3>Chicken Tandori</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 250</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-4.png" alt="">
-            <h3>Pizza</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 150</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-5.png" alt="">
-            <h3>Ice cream</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 210</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="./resources/images/FoodWeb/images/dish-6.png" alt="">
-            <h3>tasty food</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>&#x20b9; 200</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
+               
         <%
         StoreDao sd=new StoreDao();
         String query=request.getParameter("q");
@@ -300,232 +203,6 @@
 <!-- about section ends -->
 
 <!-- menu section starts  -->
-
-<section class="menu" id="menu">
-
-    <h3 class="sub-heading"> our menu </h3>
-    <h1 class="heading"> today's speciality </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-1.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 146</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-2.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 306</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-3.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 204</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-4.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 156</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-5.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 145</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-6.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 304</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-7.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 129</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-8.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 216</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./resources/images/FoodWeb/images/menu-9.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">&#x20b9; 251</span>
-            </div>
-        </div>
-       
-        
-        <%
-            
-       
-            for(int i=0;i<list.size();i++)
-            {
-                rsfb=list.get(i);
-                
-              
-                %> 
-                <div class="box" id="<%= rsfb.getRelationId() %>">
-                    <div class="image">
-                        <img src="<%= rsfb.getPath() %>" alt="">
-                        <a href="#" class="fas fa-heart"></a>
-                    </div>
-                    <div class="content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <h3><%= sd.getFoodName(rsfb.getFoodid()) %></h3>
-                        <p>By <%= sd.getStoreName(rsfb.getStoreid()) %> </p>
-                        <div id="btngrp<%= rsfb.getRelationId()%>">
-                            <button class="btn" onclick="setcart(<%=  rsfb.getRelationId()%>)" id="somebutton">Add to Cart <i class="fas fa-plus-circle"></i></button>
-                            </div>
-                        <span class="price">&#x20b9; <%= rsfb.getPrice() %></span>
-                    </div>
-                </div>
-        <%
-            }
-        %>
-
-    </div>
-
-</section>
 
 <!-- menu section ends -->
 
@@ -622,59 +299,6 @@
 
 <!-- order section starts  -->
 
-<section class="order" id="order">
-
-    <h3 class="sub-heading"> order now </h3>
-    <h1 class="heading"> free and fast </h1>
-
-    <form action="">
-
-        <div class="inputBox">
-            <div class="input">
-                <span>your name</span>
-                <input type="text" placeholder="enter your name">
-            </div>
-            <div class="input">
-                <span>your number</span>
-                <input type="number" placeholder="enter your number">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>your order</span>
-                <input type="text" placeholder="enter food name">
-            </div>
-            <div class="input">
-                <span>additional food</span>
-                <input type="test" placeholder="extra with food">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>how musch</span>
-                <input type="number" placeholder="how many orders">
-            </div>
-            <div class="input">
-                <span>date and time</span>
-                <input type="datetime-local">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>your address</span>
-                <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="input">
-                <span>your message</span>
-                <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-
-        <input type="submit" value="order now" class="btn">
-
-    </form>
-
-</section>
 
 <!-- order section ends -->
 
@@ -695,12 +319,11 @@
 
         <div class="box">
             <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">dishes</a>
-            <a href="#">about</a>
-            <a href="#">menu</a>
-            <a href="#">reivew</a>
-            <a href="#">order</a>
+            <a href="#home">home</a>
+            <a href="#dishes">dishes</a>
+            <a href="#about">about</a>
+            <a href="#review">review</a>
+            <a href="inin.jsp">Login</a>
         </div>
 
         <div class="box">

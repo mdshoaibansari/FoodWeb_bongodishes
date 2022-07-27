@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,8 +52,25 @@ public class AddNewFoodInStore extends HttpServlet {
 		response.setContentType("text/plain"); // Set content type of the response so that jQuery knows what it can
 												// expect.
 		response.setCharacterEncoding("UTF-8");
-		int storeid=Integer.parseInt(request.getParameter("storeid"));
-		
+		// int storeid=Integer.parseInt(request.getParameter("storeid"));
+		int storeid=0;
+		Cookie[] c= request.getCookies();
+          if(c!=null){
+ 
+          for(int ij=0 ; ij<c.length;ij++){
+              try{
+                
+                      if(c[ij].getName().equals("managestoreid")){
+                        storeid=Integer.parseInt(c[ij].getValue());
+                      }                
+                
+              }
+              catch(Exception e){
+            	  e.printStackTrace();
+              }
+              
+            }
+          }
 		int foodid = Integer.parseInt(request.getParameter("foodid"));
 		int price = Integer.parseInt(request.getParameter("price"));
 		int quantity = Integer.parseInt(request.getParameter("quantity"));

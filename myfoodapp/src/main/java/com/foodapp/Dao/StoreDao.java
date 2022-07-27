@@ -57,7 +57,7 @@ public class StoreDao {
 		
 		return list;
 	}
-	public RelStoreFoodBean getRelations(int relationId){
+	public RelStoreFoodBean getRelation(int relationId){
 		RelStoreFoodBean rsfb=new RelStoreFoodBean();
 		try {
 			Connection conn=DButil.getConnection();

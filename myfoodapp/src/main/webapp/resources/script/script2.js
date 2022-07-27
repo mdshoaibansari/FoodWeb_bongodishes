@@ -183,6 +183,8 @@ function readyfight() {
 }
 window.onload = function () {
   let arr = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
-
-  document.getElementById('totalamount').innerText = parseInt(arr['totalamount']);
+  let a=parseInt(arr['totalamount']);
+  if (!isNaN(a)) {
+  document.getElementById('totalamount').innerText = a;
+  }
 }

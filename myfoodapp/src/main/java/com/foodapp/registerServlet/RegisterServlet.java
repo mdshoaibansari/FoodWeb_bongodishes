@@ -36,6 +36,7 @@ public class RegisterServlet extends HttpServlet {
         String username = req.getParameter("username");
         String passwd = req.getParameter("pass");
         String phnumber = req.getParameter("phnumber");
+        String address= req.getParameter("address");
         try {
             UserBean ub = new UserBean();
 
@@ -44,6 +45,7 @@ public class RegisterServlet extends HttpServlet {
             ub.setPassword(encrypt(passwd, key));
             ub.setEmail(email);
             ub.setPhnumber(phnumber);
+            ub.setAddress(address);
             HttpSession session=req.getSession();
             session.setAttribute("userDetails", ub);
             resp.sendRedirect("OtpValidation");

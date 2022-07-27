@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.foodapp.Dao.UserDao;
+
 /**
  * Servlet implementation class ForgotPassword
  */
@@ -32,7 +34,12 @@ public class ForgotPassword extends HttpServlet {
 		int otpvalue = 0;
 		HttpSession mySession = request.getSession();
 		System.out.println(email+"it is start working");
+		UserDao ud=new UserDao();
+		
 		if(email!=null || !email.equals("")) {
+			
+			String uid=ud.validUser(email);
+			if(uid!=null){
 			// sending otp
 			Random rand = new Random();
 			otpvalue = rand.nextInt(1255650);
@@ -70,10 +77,16 @@ public class ForgotPassword extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("EnterOtp.jsp");
 			request.setAttribute("message","OTP is sent to your email id");
 			//request.setAttribute("connection", con);
+			mySession.setAttribute("name", uid);
 			mySession.setAttribute("otp",otpvalue); 
 			mySession.setAttribute("email",email); 
 			dispatcher.forward(request, response);
 			//request.setAttribute("status", "success");
+			}
+			else{
+				mySession.setAttribute("error", "Invalid Email");
+				request.getRequestDispatcher("inin.jsp").forward(request, response);
+			}
 		}
 	     }catch (Exception e) {
 				e.printStackTrace();

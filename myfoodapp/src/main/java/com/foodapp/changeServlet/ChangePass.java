@@ -40,7 +40,7 @@ public class ChangePass extends HttpServlet{
         String newPass=req.getParameter("inputPassword");
         // out.println("<h2>"+uB.getUserName()+"</h2>");
         UserDao dao=new UserDao();
-        if(dao.changePass(name,oldPass,newPass))
+        if(dao.changePass(name,newPass))
          {
             out.println("<h2>Paasword Change Successfully</h2>");
             Cookie c=new Cookie("UserName", name);

@@ -21,8 +21,7 @@ public class DeleteMultFoodInStore extends HttpServlet{
 		rid.deleteCharAt(rid.length()-1);
 		StoreDao sd=new StoreDao();
 		sd.deleteFoodInStore(rid);
-		String strid=req.getParameter("storeid");
-        resp.sendRedirect("ManageStore.jsp?storeid="+strid);
+        resp.sendRedirect("ManageStore.jsp");
     }
 
     @Override
@@ -36,7 +35,7 @@ public class DeleteMultFoodInStore extends HttpServlet{
 		rid.deleteCharAt(rid.length()-1);
 		StoreDao sd=new StoreDao();
 		sd.deleteFoodInStore(rid);
-		resp.sendRedirect("ManageStore.jsp?storeid="+"");
+		resp.sendRedirect("ManageStore.jsp");
     }
 
 }

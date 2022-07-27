@@ -43,12 +43,13 @@ public class UserDao {
         boolean status=false;
         try {
             Connection conn=DButil.getConnection();
-            String sql="INSERT INTO  userdb VALUES (?,?,?,?)";
+            String sql="INSERT INTO  userdb VALUES (?,?,?,?,?)";
             PreparedStatement st=conn.prepareStatement(sql);
             st.setString(1, ub.getUserName());
             st.setString(2, ub.getPassword());
             st.setString(3, ub.getEmail());
             st.setString(4, ub.getPhnumber());
+            st.setString(5, ub.getAddress());
             int rw=st.executeUpdate();
             if(rw>=1)
               status =true;
@@ -61,15 +62,15 @@ public class UserDao {
         return status;
     }
 
-    public boolean changePass(String name,String oldPass,String newPass) {
+    public boolean changePass(String name,String newPass) {
             boolean status=false;
             try {
                 Connection conn=DButil.getConnection();
-                String sql="update userdb set pswd = ?  where uid=? and pswd=?;";
+                String sql="update userdb set pswd = ?  where uid=? ;";
                 PreparedStatement st=conn.prepareStatement(sql);
                 st.setString(1, newPass);
                 st.setString(2, name);
-                st.setString(3, oldPass);
+                
                 int row=st.executeUpdate();
                 if(row>=1)
                   status=true;
@@ -101,5 +102,26 @@ public class UserDao {
          System.out.println("Decrypted Value :: " + new String(enctVal));
          return new String(enctVal);
      }
+
+    public String validUser(String email) {
+        String uid=null;
+        String sql = "select uid from userdb where email=?";
+        try {
+            Connection conn = DButil.getConnection();
+            PreparedStatement st = conn.prepareStatement(sql);
+            st.setString(1, email);
+          
+            ResultSet rs = st.executeQuery();
+            if (rs.next()){
+               uid=rs.getString(1);
+            }
+               
+            st.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return uid;
+    }
    
 }

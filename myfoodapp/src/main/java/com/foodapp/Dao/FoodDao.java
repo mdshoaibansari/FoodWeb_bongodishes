@@ -9,7 +9,7 @@ import com.foodapp.bean.PizzaBean;
 import com.foodapp.util.DButil;
 
 public class FoodDao {
-	public int deleteStore(StringBuilder val) {
+	public int deletemultfood(StringBuilder val) {
         int rw=0;
 		try {
 			Connection conn=DButil.getConnection();

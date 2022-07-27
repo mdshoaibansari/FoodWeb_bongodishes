@@ -97,7 +97,9 @@ function manage() {
     }
     else {
         let ind = document.querySelector('input[type="checkbox"]:checked').value;
-        window.location.href = "ManageStore.jsp?storeid=" + ind;
+        let mngstrid='managestoreid='+ind;
+        document.cookie = mngstrid;
+        window.location.href = "ManageStore.jsp";
     }
 }
 function addStore() {

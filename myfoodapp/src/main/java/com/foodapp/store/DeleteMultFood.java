@@ -36,7 +36,7 @@ public class DeleteMultFood extends HttpServlet {
 		}
 		userNames.deleteCharAt(userNames.length()-1);
 		FoodDao fd=new FoodDao();
-		fd.deleteStore(userNames);
+		fd.deletemultfood(userNames);
 		response.sendRedirect("AllFood.jsp");
 	}
 

@@ -11,6 +11,7 @@ com\foodapp\food\DeleteFood.class
 com\foodapp\Dao\FoodDao.class
 com\foodapp\bean\PizzaBean.class
 com\foodapp\bean\UserBean.class
+com\foodapp\controller\ResetPassword.class
 com\foodapp\changeServlet\ChangePass.class
 com\foodapp\pizza\AddPizzaServlet.class
 com\foodapp\food\DeleteStore.class
