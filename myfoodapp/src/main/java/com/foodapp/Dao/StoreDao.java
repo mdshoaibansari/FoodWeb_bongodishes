@@ -34,7 +34,7 @@ public class StoreDao {
 				sql="select * from relationstorefood";
 			}
 			else{
-				sql="SELECT * FROM relationstorefood JOIN storedb join food_db on relationstorefood.foodid2=food_db.foodId and relationstorefood.storeid2=storedb.storeid  where food_db.foodName like '%"+query+"%'  ";
+				sql="SELECT * FROM relationstorefood JOIN storedb join food_db on relationstorefood.foodid2=food_db.foodId and relationstorefood.storeid2=storedb.storeid  where food_db.foodName like '%"+query+"%' or storedb.storename like '%"+query+"%' ";
 				
 			}
 			PreparedStatement st=conn.prepareStatement(sql);
