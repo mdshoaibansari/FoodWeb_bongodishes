@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.foodapp.Dao.PaymentDao;
 import com.foodapp.bean.PaymentBean;
@@ -33,18 +34,19 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
     pb.setMonth(month);
     pb.setYear(year);
     pb.setCvv(cvv);
+   
     
 
     try {
         PaymentDao dao = new PaymentDao();
         if (dao.doPayment(pb)) {
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            req.getRequestDispatcher("FinalPayment.jsp").forward(req, resp);
     
             
         } else {
 
             req.setAttribute("error", "something went wronging");
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            req.getRequestDispatcher("NewUserHome.jsp").forward(req, resp);
         }
     } catch (Exception e) {
 

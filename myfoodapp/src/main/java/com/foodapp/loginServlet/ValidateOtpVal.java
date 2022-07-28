@@ -29,7 +29,7 @@ public class ValidateOtpVal extends HttpServlet {
         if (value == otp) {
             UserBean ub=(UserBean) session.getAttribute("userDetails");
             request.setAttribute("status", "success");
-            session.setAttribute("name", ub.getEmail());
+            session.setAttribute("email", ub.getEmail());
             UserDao dao = new UserDao();
             if (dao.setUser(ub)) { 
                 request.getRequestDispatcher("NewUserHome.jsp").forward(request, response);    
